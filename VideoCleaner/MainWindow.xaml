@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Video Cleaner" Height="450" Width="800" WindowStartupLocation="CenterScreen"  ResizeMode="NoResize">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
+        <Label Content="Video Cleaner®" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="56" Width="772" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25"/>
+        <Slider x:Name="slider_precision" HorizontalAlignment="Left" Margin="16,106,0,0" VerticalAlignment="Top" Height="34" RenderTransformOrigin="0.5,0.5" Width="751" Maximum="1000" Minimum="1" Value="100" ValueChanged="slider_precision_ValueChanged" SmallChange="1" IsSnapToTickEnabled="True">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Label x:Name="label_precision" Content="Précision : 100" HorizontalAlignment="Left" Margin="16,89,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label x:Name="label_video" Content="Vidéo :" HorizontalAlignment="Left" Margin="16,158,0,0" VerticalAlignment="Top"/>
+        <Border HorizontalAlignment="Left" Height="155" Margin="22,184,0,0" VerticalAlignment="Top" Width="261" BorderBrush="#FFFF7808" BorderThickness="1" >
+            <Image x:Name="img_video" Source="images.png" MouseDown="Image_MouseDown" />
+        </Border>
+        <Button x:Name="Button_cleaner" Content="Cleaner !" HorizontalAlignment="Left" Margin="22,373,0,0" VerticalAlignment="Top" Width="745" Height="27" Click="Button_Click"/>
+        <Label x:Name="label_prix" Content="Prix : " HorizontalAlignment="Left" Margin="588,347,0,0" VerticalAlignment="Top" Width="179" HorizontalContentAlignment="Right"/>
+        <ProgressBar x:Name="progressBar_cleaner" HorizontalAlignment="Left" Height="13" Margin="22,373,0,0" VerticalAlignment="Top" Width="745" Visibility="Hidden" />
+        <ProgressBar x:Name="progressBar_cleaner_2" HorizontalAlignment="Left" Height="13" Margin="22,391,0,0" VerticalAlignment="Top" Width="745" Visibility="Hidden" />
+        <Label x:Name="label_pourcentage" Content="Chargement de la vidéo..." HorizontalAlignment="Left" Margin="22,353,0,0" VerticalAlignment="Top" Width="745" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+
+        <Border HorizontalAlignment="Left" Height="155" Margin="488,184,0,0" VerticalAlignment="Top" Width="279" BorderBrush="Black" BorderThickness="1">
+            
+        </Border>
+        <Image x:Name="img_preview" HorizontalAlignment="Left" Height="155" Margin="488,184,0,0" VerticalAlignment="Top" Width="279"/>
+        <CheckBox x:Name="checkBox_debug" Content="Debug" HorizontalAlignment="Left" Margin="22,353,0,0" VerticalAlignment="Top" Checked="checkBox_debug_Checked" Unchecked="checkBox_debug_Unchecked"/>
+        <Button x:Name="button_ia" Content="Start AI" HorizontalAlignment="Left" Margin="356,387,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
