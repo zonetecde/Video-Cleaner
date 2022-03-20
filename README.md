@@ -5,7 +5,10 @@ Algorithme fait durant mon stage de 3eme.
 
 Exemple :
 
-https://www.youtube.com/watch?v=bYGjGi0JdcU Vidéo d'une autoroute 
+
+Vidéo d'une autoroute 
+[![Vidéo d'exemple]](https://www.youtube.com/watch?v=bYGjGi0JdcU )
+
 
 Image générée par le logiciel :
 
